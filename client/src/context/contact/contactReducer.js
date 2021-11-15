@@ -36,6 +36,16 @@ export default (state, action) => {
         ...state,
         current: null,
       };
+    case FILTER_CONTACTS:
+      return {
+        ...state,
+        filtered: action.payload,
+      };
+    case CLEAR_FILTER:
+      return {
+        ...state,
+        filtered: null,
+      };
     default:
       return state;
   }
